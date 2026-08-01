@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server MOTD</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-color: #111;
+        }
+        /* Background Image Setup */
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* REPLACE WITH YOUR IMAGE URL */
+            background-image: url('https://i.imgur.com/PhLNWIz.jpeg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px) brightness(40%);
+            z-index: -1;
+            transform: scale(1.1); /* Prevents white edges from blur */
+        }
+        /* Main Container */
+        .container {
+            width: 85%;
+            max-width: 800px;
+            height: 80vh;
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ff9900; /* Change to your server's theme color */
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        header p {
+            color: #ccc;
+            margin-top: 5px;
+            font-size: 1.1rem;
+        }
+        /* Scrollable Rules Area */
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding-right: 15px;
+        }
+        /* Custom Scrollbar for GMod Chromium */
+        .content::-webkit-scrollbar {
+            width: 8px;
+        }
+        .content::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+        }
+        .content::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+        }
+        .content::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+        /* Rule Sections */
+        .section {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #ff9900;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+        .section h2 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .section ol {
+            padding-left: 20px;
+        }
+        .section li {
+            margin-bottom: 8px;
+            color: #ddd;
+            line-height: 1.4;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-image"></div>
+
+    <div class="container">
+        <header>
+            <h1>My Cool GMod Server</h1>
+            <p>Welcome to the community! Please read the rules before playing.</p>
+        </header>
+
+        <div class="content">
+            <div class="section">
+                <h2>1. General Conduct</h2>
+                <ol>
+                    <li>Be respectful to all players and staff members.</li>
+                    <li>No cheating, hacking, or exploiting server bugs.</li>
+                    <li>Do not spam voice or text chat.</li>
+                </ol>
+            </div>
+
+            <div class="section">
+                <h2>2. Gameplay Rules</h2>
+                <ol>
+                    <li>No Random Deathmatching (RDM).</li>
+                    <li>Prop pushing, prop surfing, and prop killing are strictly forbidden.</li>
+                    <li>Listen to staff instructions at all times.</li>
+                </ol>
+            </div>
+
+            <div class="section">
+                <h2>3. Community Info</h2>
+                <ol>
+                    <li>Join our Discord to report players or appeal bans.</li>
+                    <li>Visit our store to support the server and get VIP perks.</li>
+                </ol>
+            </div>
+        </div>
+
+        <footer>
+            Press the close button or type !motd to open this menu again.
+        </footer>
+    </div>
+
+</body>
+</html>
