@@ -28,12 +28,12 @@
             width: 100%;
             height: 100%;
             /* REPLACE WITH YOUR IMAGE URL */
-            background-image: url('https://i.imgur.com/PhLNWIz.jpeg');
+            background-image: url('https://unsplash.com');
             background-size: cover;
             background-position: center;
             filter: blur(8px) brightness(40%);
             z-index: -1;
-            transform: scale(1.1); /* Prevents white edges from blur */
+            transform: scale(1.1);
         }
         /* Main Container */
         .container {
@@ -57,7 +57,7 @@
             font-size: 2.5rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #ff9900; /* Change to your server's theme color */
+            color: #ff9900;
             text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
         header p {
@@ -71,7 +71,7 @@
             overflow-y: auto;
             padding-right: 15px;
         }
-        /* Custom Scrollbar for GMod Chromium */
+        /* Custom Scrollbar */
         .content::-webkit-scrollbar {
             width: 8px;
         }
@@ -106,6 +106,19 @@
             margin-bottom: 8px;
             color: #ddd;
             line-height: 1.4;
+        }
+        /* Styled Hyperlinks */
+        .server-link {
+            color: #ff9900;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.2s ease-in-out;
+            border-bottom: 1px dashed rgba(255, 153, 0, 0.5);
+        }
+        .server-link:hover {
+            color: #ffffff;
+            text-shadow: 0 0 8px #ff9900;
+            border-bottom: 1px solid #ffffff;
         }
         footer {
             text-align: center;
@@ -147,8 +160,8 @@
             <div class="section">
                 <h2>3. Community Info</h2>
                 <ol>
-                    <li>Join our Discord to report players or appeal bans.</li>
-                    <li>Visit our store to support the server and get VIP perks.</li>
+                    <li>Make sure to download our <a class="server-link" href="YOUR_COLLECTION_LINK_HERE" target="_blank">Steam Workshop Collection</a> to avoid seeing missing textures or error models.</li>
+                    <li>Join our official <a class="server-link" href="YOUR_DISCORD_LINK_HERE" target="_blank">Discord Server</a> to report rule breakers, chat with the community, or appeal bans.</li>
                 </ol>
             </div>
         </div>
